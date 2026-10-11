@@ -1,1 +1,24 @@
-C # debug windows
+Modbus Read/Write debug window (.NET 10 / Windows Forms)
+
+Open ModbusReadWrite/ModbusReadWrite.slnx in Visual Studio with .NET 10 SDK.
+Restore NuGet packages (System.IO.Ports 10.0.0), then build and run.
+
+COM ports refresh every second. Connect/disconnect releases the port; removing
+an active port disconnects automatically. Baud: 4800..230400. UART formats:
+7/8 bits, N/E/O parity, 1/2 stop bits. RTU requires 8 bits. ASCII supports 7/8.
+Station is decimal 1..247, default 2. Protocol defaults to RTU, UART to 115200 8/N/1.
+
+Each of the 13 rows reads ONE holding register with 03 or writes ONE register
+with 06. Addresses are zero-based protocol addresses, not 4xxxx references.
+Checked HEX accepts 1010h, 0x1010, or 1010. Unchecked DEC accepts 0..65535.
+The row checkbox applies to both address and value and converts both without
+changing their numerical value. Registers are unsigned 16-bit values.
+
+RX validates station, function, CRC/LRC, length, exception responses and 06 echo.
+Commands run off the UI thread and are serialized; timeout is one second.
+TX/RX log displays decoded Modbus payloads (without framing/checksum).
+No automatic retry of writes. A timed-out write may already have reached the
+slave: read back before deciding whether to repeat it.
+
+Validation environment had no .NET SDK or serial hardware. Windows build,
+USB hotplug, RTU/ASCII reads/writes and exception responses need live validation.

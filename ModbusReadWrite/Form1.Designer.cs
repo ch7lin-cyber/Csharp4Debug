@@ -1,4 +1,4 @@
-﻿namespace ModbusReadWrite
+namespace ModbusReadWrite
 {
     partial class main
     {
@@ -28,6 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            hex1_check = new CheckBox();
+            hex2_check = new CheckBox();
+            hex3_check = new CheckBox();
+            hex4_check = new CheckBox();
+            hex5_check = new CheckBox();
+            hex6_check = new CheckBox();
+            hex7_check = new CheckBox();
+            hex8_check = new CheckBox();
+            hex9_check = new CheckBox();
+            hex10_check = new CheckBox();
+            hex11_check = new CheckBox();
+            hex12_check = new CheckBox();
+            hex13_check = new CheckBox();
             link_btn = new Button();
             comPort_comb = new ComboBox();
             comPort_lbl = new Label();
@@ -727,6 +740,84 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            hex1_check.Name = "hex1_check";
+            hex1_check.Text = "HEX";
+            hex1_check.Checked = true;
+            hex1_check.Location = new Point(370, 50);
+            hex1_check.Size = new Size(65, 24);
+            Controls.Add(hex1_check);
+            hex2_check.Name = "hex2_check";
+            hex2_check.Text = "HEX";
+            hex2_check.Checked = true;
+            hex2_check.Location = new Point(370, 80);
+            hex2_check.Size = new Size(65, 24);
+            Controls.Add(hex2_check);
+            hex3_check.Name = "hex3_check";
+            hex3_check.Text = "HEX";
+            hex3_check.Checked = true;
+            hex3_check.Location = new Point(370, 110);
+            hex3_check.Size = new Size(65, 24);
+            Controls.Add(hex3_check);
+            hex4_check.Name = "hex4_check";
+            hex4_check.Text = "HEX";
+            hex4_check.Checked = true;
+            hex4_check.Location = new Point(370, 140);
+            hex4_check.Size = new Size(65, 24);
+            Controls.Add(hex4_check);
+            hex5_check.Name = "hex5_check";
+            hex5_check.Text = "HEX";
+            hex5_check.Checked = true;
+            hex5_check.Location = new Point(370, 170);
+            hex5_check.Size = new Size(65, 24);
+            Controls.Add(hex5_check);
+            hex6_check.Name = "hex6_check";
+            hex6_check.Text = "HEX";
+            hex6_check.Checked = true;
+            hex6_check.Location = new Point(370, 200);
+            hex6_check.Size = new Size(65, 24);
+            Controls.Add(hex6_check);
+            hex7_check.Name = "hex7_check";
+            hex7_check.Text = "HEX";
+            hex7_check.Checked = true;
+            hex7_check.Location = new Point(370, 230);
+            hex7_check.Size = new Size(65, 24);
+            Controls.Add(hex7_check);
+            hex8_check.Name = "hex8_check";
+            hex8_check.Text = "HEX";
+            hex8_check.Checked = true;
+            hex8_check.Location = new Point(370, 260);
+            hex8_check.Size = new Size(65, 24);
+            Controls.Add(hex8_check);
+            hex9_check.Name = "hex9_check";
+            hex9_check.Text = "HEX";
+            hex9_check.Checked = true;
+            hex9_check.Location = new Point(370, 290);
+            hex9_check.Size = new Size(65, 24);
+            Controls.Add(hex9_check);
+            hex10_check.Name = "hex10_check";
+            hex10_check.Text = "HEX";
+            hex10_check.Checked = true;
+            hex10_check.Location = new Point(370, 320);
+            hex10_check.Size = new Size(65, 24);
+            Controls.Add(hex10_check);
+            hex11_check.Name = "hex11_check";
+            hex11_check.Text = "HEX";
+            hex11_check.Checked = true;
+            hex11_check.Location = new Point(370, 350);
+            hex11_check.Size = new Size(65, 24);
+            Controls.Add(hex11_check);
+            hex12_check.Name = "hex12_check";
+            hex12_check.Text = "HEX";
+            hex12_check.Checked = true;
+            hex12_check.Location = new Point(370, 380);
+            hex12_check.Size = new Size(65, 24);
+            Controls.Add(hex12_check);
+            hex13_check.Name = "hex13_check";
+            hex13_check.Text = "HEX";
+            hex13_check.Checked = true;
+            hex13_check.Location = new Point(370, 410);
+            hex13_check.Size = new Size(65, 24);
+            Controls.Add(hex13_check);
             ClientSize = new Size(800, 450);
             Controls.Add(textBox24);
             Controls.Add(textBox25);
@@ -808,11 +899,25 @@
 
         #endregion
 
+        private CheckBox hex1_check;
+        private CheckBox hex2_check;
+        private CheckBox hex3_check;
+        private CheckBox hex4_check;
+        private CheckBox hex5_check;
+        private CheckBox hex6_check;
+        private CheckBox hex7_check;
+        private CheckBox hex8_check;
+        private CheckBox hex9_check;
+        private CheckBox hex10_check;
+        private CheckBox hex11_check;
+        private CheckBox hex12_check;
+        private CheckBox hex13_check;
         private Button link_btn;
         private ComboBox comPort_comb;
         private Label comPort_lbl;
         private Label address1_lbl;
-        private TextBox address_hex;
+        private TextBox address1_hex;
+        private Button readAddress1_btn;
         private TextBox textBox1;
         private Button writeAddress1_btn;
         private TextBox textBox2;
