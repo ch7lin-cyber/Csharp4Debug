@@ -45,8 +45,8 @@ namespace ModbusReadWrite
             comPort_comb = new ComboBox();
             comPort_lbl = new Label();
             address1_lbl = new Label();
-            this.address1_hex = new TextBox();
-            this.readAddress1_btn = new Button();
+            address1_hex = new TextBox();
+            readAddress1_btn = new Button();
             textBox1 = new TextBox();
             writeAddress1_btn = new Button();
             textBox2 = new TextBox();
@@ -113,7 +113,142 @@ namespace ModbusReadWrite
             baudRate_txt = new Label();
             format_comb = new ComboBox();
             rtuAscii_comb = new ComboBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            numericUpDown1 = new NumericUpDown();
+            stationNumber_lbl = new Label();
+            rxtx_msg_txt = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
+            // 
+            // hex1_check
+            // 
+            hex1_check.Checked = true;
+            hex1_check.CheckState = CheckState.Checked;
+            hex1_check.Location = new Point(370, 50);
+            hex1_check.Name = "hex1_check";
+            hex1_check.Size = new Size(65, 24);
+            hex1_check.TabIndex = 0;
+            hex1_check.Text = "HEX";
+            // 
+            // hex2_check
+            // 
+            hex2_check.Checked = true;
+            hex2_check.CheckState = CheckState.Checked;
+            hex2_check.Location = new Point(370, 80);
+            hex2_check.Name = "hex2_check";
+            hex2_check.Size = new Size(65, 24);
+            hex2_check.TabIndex = 1;
+            hex2_check.Text = "HEX";
+            // 
+            // hex3_check
+            // 
+            hex3_check.Checked = true;
+            hex3_check.CheckState = CheckState.Checked;
+            hex3_check.Location = new Point(370, 110);
+            hex3_check.Name = "hex3_check";
+            hex3_check.Size = new Size(65, 24);
+            hex3_check.TabIndex = 2;
+            hex3_check.Text = "HEX";
+            // 
+            // hex4_check
+            // 
+            hex4_check.Checked = true;
+            hex4_check.CheckState = CheckState.Checked;
+            hex4_check.Location = new Point(370, 140);
+            hex4_check.Name = "hex4_check";
+            hex4_check.Size = new Size(65, 24);
+            hex4_check.TabIndex = 3;
+            hex4_check.Text = "HEX";
+            // 
+            // hex5_check
+            // 
+            hex5_check.Checked = true;
+            hex5_check.CheckState = CheckState.Checked;
+            hex5_check.Location = new Point(370, 170);
+            hex5_check.Name = "hex5_check";
+            hex5_check.Size = new Size(65, 24);
+            hex5_check.TabIndex = 4;
+            hex5_check.Text = "HEX";
+            // 
+            // hex6_check
+            // 
+            hex6_check.Checked = true;
+            hex6_check.CheckState = CheckState.Checked;
+            hex6_check.Location = new Point(370, 200);
+            hex6_check.Name = "hex6_check";
+            hex6_check.Size = new Size(65, 24);
+            hex6_check.TabIndex = 5;
+            hex6_check.Text = "HEX";
+            // 
+            // hex7_check
+            // 
+            hex7_check.Checked = true;
+            hex7_check.CheckState = CheckState.Checked;
+            hex7_check.Location = new Point(370, 230);
+            hex7_check.Name = "hex7_check";
+            hex7_check.Size = new Size(65, 24);
+            hex7_check.TabIndex = 6;
+            hex7_check.Text = "HEX";
+            // 
+            // hex8_check
+            // 
+            hex8_check.Checked = true;
+            hex8_check.CheckState = CheckState.Checked;
+            hex8_check.Location = new Point(370, 260);
+            hex8_check.Name = "hex8_check";
+            hex8_check.Size = new Size(65, 24);
+            hex8_check.TabIndex = 7;
+            hex8_check.Text = "HEX";
+            // 
+            // hex9_check
+            // 
+            hex9_check.Checked = true;
+            hex9_check.CheckState = CheckState.Checked;
+            hex9_check.Location = new Point(370, 290);
+            hex9_check.Name = "hex9_check";
+            hex9_check.Size = new Size(65, 24);
+            hex9_check.TabIndex = 8;
+            hex9_check.Text = "HEX";
+            // 
+            // hex10_check
+            // 
+            hex10_check.Checked = true;
+            hex10_check.CheckState = CheckState.Checked;
+            hex10_check.Location = new Point(370, 320);
+            hex10_check.Name = "hex10_check";
+            hex10_check.Size = new Size(65, 24);
+            hex10_check.TabIndex = 9;
+            hex10_check.Text = "HEX";
+            // 
+            // hex11_check
+            // 
+            hex11_check.Checked = true;
+            hex11_check.CheckState = CheckState.Checked;
+            hex11_check.Location = new Point(370, 350);
+            hex11_check.Name = "hex11_check";
+            hex11_check.Size = new Size(65, 24);
+            hex11_check.TabIndex = 10;
+            hex11_check.Text = "HEX";
+            // 
+            // hex12_check
+            // 
+            hex12_check.Checked = true;
+            hex12_check.CheckState = CheckState.Checked;
+            hex12_check.Location = new Point(370, 380);
+            hex12_check.Name = "hex12_check";
+            hex12_check.Size = new Size(65, 24);
+            hex12_check.TabIndex = 11;
+            hex12_check.Text = "HEX";
+            // 
+            // hex13_check
+            // 
+            hex13_check.Checked = true;
+            hex13_check.CheckState = CheckState.Checked;
+            hex13_check.Location = new Point(370, 410);
+            hex13_check.Name = "hex13_check";
+            hex13_check.Size = new Size(65, 24);
+            hex13_check.TabIndex = 12;
+            hex13_check.Text = "HEX";
             // 
             // link_btn
             // 
@@ -152,20 +287,20 @@ namespace ModbusReadWrite
             // 
             // address1_hex
             // 
-            this.address1_hex.Location = new Point(74, 50);
-            this.address1_hex.Name = "address1_hex";
-            this.address1_hex.Size = new Size(90, 24);
-            this.address1_hex.TabIndex = 4;
-            this.address1_hex.Text = "1010h";
+            address1_hex.Location = new Point(74, 50);
+            address1_hex.Name = "address1_hex";
+            address1_hex.Size = new Size(90, 24);
+            address1_hex.TabIndex = 4;
+            address1_hex.Text = "1010h";
             // 
             // readAddress1_btn
             // 
-            this.readAddress1_btn.Location = new Point(170, 49);
-            this.readAddress1_btn.Name = "readAddress1_btn";
-            this.readAddress1_btn.Size = new Size(44, 24);
-            this.readAddress1_btn.TabIndex = 0;
-            this.readAddress1_btn.Text = "R";
-            this.readAddress1_btn.UseVisualStyleBackColor = true;
+            readAddress1_btn.Location = new Point(170, 49);
+            readAddress1_btn.Name = "readAddress1_btn";
+            readAddress1_btn.Size = new Size(44, 24);
+            readAddress1_btn.TabIndex = 0;
+            readAddress1_btn.Text = "R";
+            readAddress1_btn.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -736,89 +871,50 @@ namespace ModbusReadWrite
             rtuAscii_comb.TabIndex = 1;
             rtuAscii_comb.Text = "ASCII";
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(535, 55);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(73, 24);
+            numericUpDown1.TabIndex = 65;
+            numericUpDown1.Value = new decimal(new int[] { 2, 0, 0, 0 });
+            // 
+            // stationNumber_lbl
+            // 
+            stationNumber_lbl.AutoSize = true;
+            stationNumber_lbl.Location = new Point(461, 57);
+            stationNumber_lbl.Name = "stationNumber_lbl";
+            stationNumber_lbl.Size = new Size(68, 17);
+            stationNumber_lbl.TabIndex = 2;
+            stationNumber_lbl.Text = "站號(DEC)";
+            // 
+            // rxtx_msg_txt
+            // 
+            rxtx_msg_txt.Location = new Point(461, 95);
+            rxtx_msg_txt.Name = "rxtx_msg_txt";
+            rxtx_msg_txt.Size = new Size(305, 24);
+            rxtx_msg_txt.TabIndex = 66;
+            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            hex1_check.Name = "hex1_check";
-            hex1_check.Text = "HEX";
-            hex1_check.Checked = true;
-            hex1_check.Location = new Point(370, 50);
-            hex1_check.Size = new Size(65, 24);
-            Controls.Add(hex1_check);
-            hex2_check.Name = "hex2_check";
-            hex2_check.Text = "HEX";
-            hex2_check.Checked = true;
-            hex2_check.Location = new Point(370, 80);
-            hex2_check.Size = new Size(65, 24);
-            Controls.Add(hex2_check);
-            hex3_check.Name = "hex3_check";
-            hex3_check.Text = "HEX";
-            hex3_check.Checked = true;
-            hex3_check.Location = new Point(370, 110);
-            hex3_check.Size = new Size(65, 24);
-            Controls.Add(hex3_check);
-            hex4_check.Name = "hex4_check";
-            hex4_check.Text = "HEX";
-            hex4_check.Checked = true;
-            hex4_check.Location = new Point(370, 140);
-            hex4_check.Size = new Size(65, 24);
-            Controls.Add(hex4_check);
-            hex5_check.Name = "hex5_check";
-            hex5_check.Text = "HEX";
-            hex5_check.Checked = true;
-            hex5_check.Location = new Point(370, 170);
-            hex5_check.Size = new Size(65, 24);
-            Controls.Add(hex5_check);
-            hex6_check.Name = "hex6_check";
-            hex6_check.Text = "HEX";
-            hex6_check.Checked = true;
-            hex6_check.Location = new Point(370, 200);
-            hex6_check.Size = new Size(65, 24);
-            Controls.Add(hex6_check);
-            hex7_check.Name = "hex7_check";
-            hex7_check.Text = "HEX";
-            hex7_check.Checked = true;
-            hex7_check.Location = new Point(370, 230);
-            hex7_check.Size = new Size(65, 24);
-            Controls.Add(hex7_check);
-            hex8_check.Name = "hex8_check";
-            hex8_check.Text = "HEX";
-            hex8_check.Checked = true;
-            hex8_check.Location = new Point(370, 260);
-            hex8_check.Size = new Size(65, 24);
-            Controls.Add(hex8_check);
-            hex9_check.Name = "hex9_check";
-            hex9_check.Text = "HEX";
-            hex9_check.Checked = true;
-            hex9_check.Location = new Point(370, 290);
-            hex9_check.Size = new Size(65, 24);
-            Controls.Add(hex9_check);
-            hex10_check.Name = "hex10_check";
-            hex10_check.Text = "HEX";
-            hex10_check.Checked = true;
-            hex10_check.Location = new Point(370, 320);
-            hex10_check.Size = new Size(65, 24);
-            Controls.Add(hex10_check);
-            hex11_check.Name = "hex11_check";
-            hex11_check.Text = "HEX";
-            hex11_check.Checked = true;
-            hex11_check.Location = new Point(370, 350);
-            hex11_check.Size = new Size(65, 24);
-            Controls.Add(hex11_check);
-            hex12_check.Name = "hex12_check";
-            hex12_check.Text = "HEX";
-            hex12_check.Checked = true;
-            hex12_check.Location = new Point(370, 380);
-            hex12_check.Size = new Size(65, 24);
-            Controls.Add(hex12_check);
-            hex13_check.Name = "hex13_check";
-            hex13_check.Text = "HEX";
-            hex13_check.Checked = true;
-            hex13_check.Location = new Point(370, 410);
-            hex13_check.Size = new Size(65, 24);
-            Controls.Add(hex13_check);
             ClientSize = new Size(800, 450);
+            Controls.Add(rxtx_msg_txt);
+            Controls.Add(numericUpDown1);
+            Controls.Add(hex1_check);
+            Controls.Add(hex2_check);
+            Controls.Add(hex3_check);
+            Controls.Add(hex4_check);
+            Controls.Add(hex5_check);
+            Controls.Add(hex6_check);
+            Controls.Add(hex7_check);
+            Controls.Add(hex8_check);
+            Controls.Add(hex9_check);
+            Controls.Add(hex10_check);
+            Controls.Add(hex11_check);
+            Controls.Add(hex12_check);
+            Controls.Add(hex13_check);
             Controls.Add(textBox24);
             Controls.Add(textBox25);
             Controls.Add(label12);
@@ -880,8 +976,9 @@ namespace ModbusReadWrite
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(textBox1);
-            Controls.Add(this.address1_hex);
+            Controls.Add(address1_hex);
             Controls.Add(address1_lbl);
+            Controls.Add(stationNumber_lbl);
             Controls.Add(baudRate_txt);
             Controls.Add(comPort_lbl);
             Controls.Add(rtuAscii_comb);
@@ -889,10 +986,11 @@ namespace ModbusReadWrite
             Controls.Add(baudrate_comb);
             Controls.Add(comPort_comb);
             Controls.Add(writeAddress1_btn);
-            Controls.Add(this.readAddress1_btn);
+            Controls.Add(readAddress1_btn);
             Controls.Add(link_btn);
             Name = "main";
             Text = "Modbus Read/Write";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -984,5 +1082,9 @@ namespace ModbusReadWrite
         private Label baudRate_txt;
         private ComboBox format_comb;
         private ComboBox rtuAscii_comb;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private NumericUpDown numericUpDown1;
+        private Label stationNumber_lbl;
+        private TextBox rxtx_msg_txt;
     }
 }

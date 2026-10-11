@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\myGitHub\\Csharp4Debug\\ModbusReadWrite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66850C4C-8CFD-4B08-9A76-29F6E917EC4A}|ModbusReadWrite.csproj|e:\\mygithub\\csharp4debug\\modbusreadwrite\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66850C4C-8CFD-4B08-9A76-29F6E917EC4A}|ModbusReadWrite.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EDDE11E0-4676-DC1C-BBE7-65C3BDDBFEE5}|ModbusReadWrite.csproj|e:\\mygithub\\csharp4debug\\modbusreadwrite\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EDDE11E0-4676-DC1C-BBE7-65C3BDDBFEE5}|ModbusReadWrite.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,11 +19,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "E:\\myGitHub\\Csharp4Debug\\ModbusReadWrite\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "E:\\myGitHub\\Csharp4Debug\\ModbusReadWrite\\Form1.cs [\u8A2D\u8A08]",
-              "RelativeToolTip": "Form1.cs [\u8A2D\u8A08]",
+              "Title": "Main.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "E:\\myGitHub\\Csharp4Debug\\ModbusReadWrite\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "E:\\myGitHub\\Csharp4Debug\\ModbusReadWrite\\Main.cs [\u8A2D\u8A08]*",
+              "RelativeToolTip": "Main.cs [\u8A2D\u8A08]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-11T09:34:17.63Z",
               "EditorCaption": " [\u8A2D\u8A08]"
