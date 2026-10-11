@@ -6,8 +6,6 @@ namespace ModbusReadWrite
     public partial class main : Form
     {
         private readonly System.Windows.Forms.Timer portTimer = new() { Interval = 1000 };
-        private readonly NumericUpDown station = new() { Minimum = 1, Maximum = 247, Value = 2, Location = new Point(590, 50), Width = 60 };
-        private readonly TextBox log = new() { Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical, Location = new Point(445, 85), Size = new Size(343, 340) };
         private SerialPort? port;
         private bool busy;
         private readonly List<Button> commands = new();
@@ -15,9 +13,6 @@ namespace ModbusReadWrite
         public main()
         {
             InitializeComponent();
-            Controls.Add(station);
-            Controls.Add(new Label { Text = "站號 (DEC)", Location = new Point(445, 53), AutoSize = true });
-            Controls.Add(log);
             Setup(baudrate_comb, new[] { "4800", "9600", "19200", "38400", "57600", "115200", "230400" }, "115200");
             Setup(format_comb, (from bits in new[] { 7, 8 } from parity in new[] { "N", "E", "O" } from stop in new[] { 1, 2 } select $"{bits}/{parity}/{stop}").ToArray(), "8/N/1");
             Setup(rtuAscii_comb, new[] { "RTU", "ASCII" }, "RTU");
@@ -87,9 +82,9 @@ namespace ModbusReadWrite
         private void Disconnect()
         { var old = port; port = null; old?.Dispose(); link_btn.Text = "連線"; SetSettings(true); SetCommands(false); }
         private void SetSettings(bool enabled)
-        { foreach (Control c in new Control[] { comPort_comb, baudrate_comb, format_comb, rtuAscii_comb, station }) c.Enabled = enabled; }
+        { foreach (Control c in new Control[] { comPort_comb, baudrate_comb, format_comb, rtuAscii_comb, numericUpDown1 }) c.Enabled = enabled; }
         private void SetCommands(bool enabled) { foreach (var b in commands) b.Enabled = enabled; }
-        private void Report(string message) { if (!IsDisposed) log.AppendText($"{DateTime.Now:HH:mm:ss} {message}{Environment.NewLine}"); }
+        private void Report(string message) { if (!IsDisposed) rxtx_msg_txt.AppendText($"{DateTime.Now:HH:mm:ss} {message}{Environment.NewLine}"); }
         private static ushort Parse(string text, bool hex)
         {
             text = text.Trim();
@@ -106,7 +101,7 @@ namespace ModbusReadWrite
             try
             {
                 ushort a = Parse(address.Text, hex.Checked), v = write ? Parse(value.Text, hex.Checked) : (ushort)1;
-                byte[] request = { (byte)station.Value, (byte)(write ? 6 : 3), (byte)(a >> 8), (byte)a, (byte)(v >> 8), (byte)v };
+                byte[] request = { (byte)numericUpDown1.Value, (byte)(write ? 6 : 3), (byte)(a >> 8), (byte)a, (byte)(v >> 8), (byte)v };
                 bool ascii = rtuAscii_comb.Text == "ASCII";
                 busy = true; SetCommands(false);
                 Report("TX " + Convert.ToHexString(request));

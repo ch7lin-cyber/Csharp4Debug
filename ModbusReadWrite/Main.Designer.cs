@@ -873,6 +873,8 @@ namespace ModbusReadWrite
             // 
             // numericUpDown1
             // 
+            numericUpDown1.Minimum = 1;
+            numericUpDown1.Maximum = 247;
             numericUpDown1.Location = new Point(535, 55);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(73, 24);
@@ -890,9 +892,13 @@ namespace ModbusReadWrite
             // 
             // rxtx_msg_txt
             // 
+            rxtx_msg_txt.Multiline = true;
+            rxtx_msg_txt.ReadOnly = true;
+            rxtx_msg_txt.ScrollBars = ScrollBars.Vertical;
+            rxtx_msg_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             rxtx_msg_txt.Location = new Point(461, 95);
             rxtx_msg_txt.Name = "rxtx_msg_txt";
-            rxtx_msg_txt.Size = new Size(305, 24);
+            rxtx_msg_txt.Size = new Size(305, 330);
             rxtx_msg_txt.TabIndex = 66;
             // 
             // main
