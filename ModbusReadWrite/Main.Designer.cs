@@ -47,68 +47,68 @@ namespace ModbusReadWrite
             address1_lbl = new Label();
             address1_hex = new TextBox();
             readAddress1_btn = new Button();
-            textBox1 = new TextBox();
+            addressW1_txt = new TextBox();
             writeAddress1_btn = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            addressW2_txt = new TextBox();
+            address2_hex = new TextBox();
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            writeAddress2_btn = new Button();
+            readAddress2_btn = new Button();
+            addressW3_txt = new TextBox();
+            address3_hex = new TextBox();
             label2 = new Label();
-            button3 = new Button();
-            button4 = new Button();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            writeAddress3_btn = new Button();
+            readAddress3_btn = new Button();
+            addressW4_txt = new TextBox();
+            address4_hex = new TextBox();
             label3 = new Label();
-            button5 = new Button();
-            button6 = new Button();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
+            writeAddress4_btn = new Button();
+            readAddress4_btn = new Button();
+            addressW5_txt = new TextBox();
+            address5_hex = new TextBox();
             label4 = new Label();
-            button7 = new Button();
-            button8 = new Button();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            writeAddress5_btn = new Button();
+            readAddress5_btn = new Button();
+            addressW6_txt = new TextBox();
+            address6_hex = new TextBox();
             label5 = new Label();
-            button9 = new Button();
-            button10 = new Button();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
+            writeAddress6_btn = new Button();
+            readAddress6_btn = new Button();
+            addressW7_txt = new TextBox();
+            address7_hex = new TextBox();
             label6 = new Label();
-            button11 = new Button();
-            button12 = new Button();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
+            writeAddress7_btn = new Button();
+            readAddress7_btn = new Button();
+            addressW8_txt = new TextBox();
+            address8_hex = new TextBox();
             label7 = new Label();
-            button13 = new Button();
-            button14 = new Button();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
+            writeAddress8_btn = new Button();
+            readAddress8_btn = new Button();
+            addressW9_txt = new TextBox();
+            address9_hex = new TextBox();
             label8 = new Label();
-            button15 = new Button();
-            button16 = new Button();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
+            writeAddress9_btn = new Button();
+            readAddress9_btn = new Button();
+            addressW10_txt = new TextBox();
+            address10_hex = new TextBox();
             label9 = new Label();
-            button17 = new Button();
-            button18 = new Button();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
+            writeAddress10_btn = new Button();
+            readAddress10_btn = new Button();
+            addressW11_txt = new TextBox();
+            address11_hex = new TextBox();
             label10 = new Label();
-            button19 = new Button();
-            button20 = new Button();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
+            writeAddress11_btn = new Button();
+            readAddress11_btn = new Button();
+            addressW12_txt = new TextBox();
+            address12_hex = new TextBox();
             label11 = new Label();
-            button21 = new Button();
-            button22 = new Button();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
+            writeAddress12_btn = new Button();
+            readAddress12_btn = new Button();
+            addressW13_txt = new TextBox();
+            address13_hex = new TextBox();
             label12 = new Label();
-            button23 = new Button();
-            button24 = new Button();
+            writeAddress13_btn = new Button();
+            readAddress13_btn = new Button();
             baudrate_comb = new ComboBox();
             baudRate_txt = new Label();
             format_comb = new ComboBox();
@@ -117,6 +117,22 @@ namespace ModbusReadWrite
             numericUpDown1 = new NumericUpDown();
             stationNumber_lbl = new Label();
             rxtx_msg_txt = new TextBox();
+            continueRead1_chk = new CheckBox();
+            continueRead_btn = new Button();
+            sec_lbl = new Label();
+            continueRead5_chk = new CheckBox();
+            continueRead4_chk = new CheckBox();
+            continueRead3_chk = new CheckBox();
+            continueRead2_chk = new CheckBox();
+            continueRead6_chk = new CheckBox();
+            continueRead7_chk = new CheckBox();
+            continueRead8_chk = new CheckBox();
+            continueRead9_chk = new CheckBox();
+            continueRead10_chk = new CheckBox();
+            continueRead11_chk = new CheckBox();
+            continueRead12_chk = new CheckBox();
+            continueRead13_chk = new CheckBox();
+            continueReadInterval_txt = new TextBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -124,7 +140,7 @@ namespace ModbusReadWrite
             // 
             hex1_check.Checked = true;
             hex1_check.CheckState = CheckState.Checked;
-            hex1_check.Location = new Point(370, 50);
+            hex1_check.Location = new Point(370, 49);
             hex1_check.Name = "hex1_check";
             hex1_check.Size = new Size(65, 24);
             hex1_check.TabIndex = 0;
@@ -287,11 +303,11 @@ namespace ModbusReadWrite
             // 
             // address1_hex
             // 
-            address1_hex.Location = new Point(74, 50);
+            address1_hex.Location = new Point(74, 49);
             address1_hex.Name = "address1_hex";
             address1_hex.Size = new Size(90, 24);
             address1_hex.TabIndex = 4;
-            address1_hex.Text = "1010h";
+            address1_hex.Text = "1005h";
             // 
             // readAddress1_btn
             // 
@@ -302,38 +318,38 @@ namespace ModbusReadWrite
             readAddress1_btn.Text = "R";
             readAddress1_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // addressW1_txt
             // 
-            textBox1.Location = new Point(220, 50);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(90, 24);
-            textBox1.TabIndex = 4;
-            textBox1.Text = "0x1234";
+            addressW1_txt.Location = new Point(220, 49);
+            addressW1_txt.Name = "addressW1_txt";
+            addressW1_txt.Size = new Size(90, 24);
+            addressW1_txt.TabIndex = 4;
+            addressW1_txt.Text = "0x1234";
             // 
             // writeAddress1_btn
             // 
-            writeAddress1_btn.Location = new Point(316, 50);
+            writeAddress1_btn.Location = new Point(316, 49);
             writeAddress1_btn.Name = "writeAddress1_btn";
             writeAddress1_btn.Size = new Size(44, 24);
             writeAddress1_btn.TabIndex = 0;
             writeAddress1_btn.Text = "W";
             writeAddress1_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // addressW2_txt
             // 
-            textBox2.Location = new Point(220, 80);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(90, 24);
-            textBox2.TabIndex = 8;
-            textBox2.Text = "0x1234";
+            addressW2_txt.Location = new Point(220, 80);
+            addressW2_txt.Name = "addressW2_txt";
+            addressW2_txt.Size = new Size(90, 24);
+            addressW2_txt.TabIndex = 8;
+            addressW2_txt.Text = "0x1234";
             // 
-            // textBox3
+            // address2_hex
             // 
-            textBox3.Location = new Point(74, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(90, 24);
-            textBox3.TabIndex = 9;
-            textBox3.Text = "1010h";
+            address2_hex.Location = new Point(74, 80);
+            address2_hex.Name = "address2_hex";
+            address2_hex.Size = new Size(90, 24);
+            address2_hex.TabIndex = 9;
+            address2_hex.Text = "1006h";
             // 
             // label1
             // 
@@ -344,39 +360,39 @@ namespace ModbusReadWrite
             label1.TabIndex = 7;
             label1.Text = "address";
             // 
-            // button1
+            // writeAddress2_btn
             // 
-            button1.Location = new Point(316, 80);
-            button1.Name = "button1";
-            button1.Size = new Size(44, 24);
-            button1.TabIndex = 5;
-            button1.Text = "W";
-            button1.UseVisualStyleBackColor = true;
+            writeAddress2_btn.Location = new Point(316, 80);
+            writeAddress2_btn.Name = "writeAddress2_btn";
+            writeAddress2_btn.Size = new Size(44, 24);
+            writeAddress2_btn.TabIndex = 5;
+            writeAddress2_btn.Text = "W";
+            writeAddress2_btn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // readAddress2_btn
             // 
-            button2.Location = new Point(170, 79);
-            button2.Name = "button2";
-            button2.Size = new Size(44, 24);
-            button2.TabIndex = 6;
-            button2.Text = "R";
-            button2.UseVisualStyleBackColor = true;
+            readAddress2_btn.Location = new Point(170, 79);
+            readAddress2_btn.Name = "readAddress2_btn";
+            readAddress2_btn.Size = new Size(44, 24);
+            readAddress2_btn.TabIndex = 6;
+            readAddress2_btn.Text = "R";
+            readAddress2_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // addressW3_txt
             // 
-            textBox4.Location = new Point(220, 110);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(90, 24);
-            textBox4.TabIndex = 13;
-            textBox4.Text = "0x1234";
+            addressW3_txt.Location = new Point(220, 110);
+            addressW3_txt.Name = "addressW3_txt";
+            addressW3_txt.Size = new Size(90, 24);
+            addressW3_txt.TabIndex = 13;
+            addressW3_txt.Text = "0x1234";
             // 
-            // textBox5
+            // address3_hex
             // 
-            textBox5.Location = new Point(74, 110);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(90, 24);
-            textBox5.TabIndex = 14;
-            textBox5.Text = "1010h";
+            address3_hex.Location = new Point(74, 110);
+            address3_hex.Name = "address3_hex";
+            address3_hex.Size = new Size(90, 24);
+            address3_hex.TabIndex = 14;
+            address3_hex.Text = "1007h";
             // 
             // label2
             // 
@@ -387,39 +403,39 @@ namespace ModbusReadWrite
             label2.TabIndex = 12;
             label2.Text = "address";
             // 
-            // button3
+            // writeAddress3_btn
             // 
-            button3.Location = new Point(316, 110);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 24);
-            button3.TabIndex = 10;
-            button3.Text = "W";
-            button3.UseVisualStyleBackColor = true;
+            writeAddress3_btn.Location = new Point(316, 110);
+            writeAddress3_btn.Name = "writeAddress3_btn";
+            writeAddress3_btn.Size = new Size(44, 24);
+            writeAddress3_btn.TabIndex = 10;
+            writeAddress3_btn.Text = "W";
+            writeAddress3_btn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // readAddress3_btn
             // 
-            button4.Location = new Point(170, 109);
-            button4.Name = "button4";
-            button4.Size = new Size(44, 24);
-            button4.TabIndex = 11;
-            button4.Text = "R";
-            button4.UseVisualStyleBackColor = true;
+            readAddress3_btn.Location = new Point(170, 109);
+            readAddress3_btn.Name = "readAddress3_btn";
+            readAddress3_btn.Size = new Size(44, 24);
+            readAddress3_btn.TabIndex = 11;
+            readAddress3_btn.Text = "R";
+            readAddress3_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // addressW4_txt
             // 
-            textBox6.Location = new Point(220, 140);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(90, 24);
-            textBox6.TabIndex = 18;
-            textBox6.Text = "0x1234";
+            addressW4_txt.Location = new Point(220, 140);
+            addressW4_txt.Name = "addressW4_txt";
+            addressW4_txt.Size = new Size(90, 24);
+            addressW4_txt.TabIndex = 18;
+            addressW4_txt.Text = "0x1234";
             // 
-            // textBox7
+            // address4_hex
             // 
-            textBox7.Location = new Point(74, 140);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(90, 24);
-            textBox7.TabIndex = 19;
-            textBox7.Text = "1010h";
+            address4_hex.Location = new Point(74, 140);
+            address4_hex.Name = "address4_hex";
+            address4_hex.Size = new Size(90, 24);
+            address4_hex.TabIndex = 19;
+            address4_hex.Text = "1008h";
             // 
             // label3
             // 
@@ -430,39 +446,39 @@ namespace ModbusReadWrite
             label3.TabIndex = 17;
             label3.Text = "address";
             // 
-            // button5
+            // writeAddress4_btn
             // 
-            button5.Location = new Point(316, 140);
-            button5.Name = "button5";
-            button5.Size = new Size(44, 24);
-            button5.TabIndex = 15;
-            button5.Text = "W";
-            button5.UseVisualStyleBackColor = true;
+            writeAddress4_btn.Location = new Point(316, 140);
+            writeAddress4_btn.Name = "writeAddress4_btn";
+            writeAddress4_btn.Size = new Size(44, 24);
+            writeAddress4_btn.TabIndex = 15;
+            writeAddress4_btn.Text = "W";
+            writeAddress4_btn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // readAddress4_btn
             // 
-            button6.Location = new Point(170, 139);
-            button6.Name = "button6";
-            button6.Size = new Size(44, 24);
-            button6.TabIndex = 16;
-            button6.Text = "R";
-            button6.UseVisualStyleBackColor = true;
+            readAddress4_btn.Location = new Point(170, 139);
+            readAddress4_btn.Name = "readAddress4_btn";
+            readAddress4_btn.Size = new Size(44, 24);
+            readAddress4_btn.TabIndex = 16;
+            readAddress4_btn.Text = "R";
+            readAddress4_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // addressW5_txt
             // 
-            textBox8.Location = new Point(220, 170);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(90, 24);
-            textBox8.TabIndex = 23;
-            textBox8.Text = "0x1234";
+            addressW5_txt.Location = new Point(220, 170);
+            addressW5_txt.Name = "addressW5_txt";
+            addressW5_txt.Size = new Size(90, 24);
+            addressW5_txt.TabIndex = 23;
+            addressW5_txt.Text = "0x1234";
             // 
-            // textBox9
+            // address5_hex
             // 
-            textBox9.Location = new Point(74, 170);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(90, 24);
-            textBox9.TabIndex = 24;
-            textBox9.Text = "1010h";
+            address5_hex.Location = new Point(74, 170);
+            address5_hex.Name = "address5_hex";
+            address5_hex.Size = new Size(90, 24);
+            address5_hex.TabIndex = 24;
+            address5_hex.Text = "1009h";
             // 
             // label4
             // 
@@ -473,39 +489,39 @@ namespace ModbusReadWrite
             label4.TabIndex = 22;
             label4.Text = "address";
             // 
-            // button7
+            // writeAddress5_btn
             // 
-            button7.Location = new Point(316, 170);
-            button7.Name = "button7";
-            button7.Size = new Size(44, 24);
-            button7.TabIndex = 20;
-            button7.Text = "W";
-            button7.UseVisualStyleBackColor = true;
+            writeAddress5_btn.Location = new Point(316, 170);
+            writeAddress5_btn.Name = "writeAddress5_btn";
+            writeAddress5_btn.Size = new Size(44, 24);
+            writeAddress5_btn.TabIndex = 20;
+            writeAddress5_btn.Text = "W";
+            writeAddress5_btn.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // readAddress5_btn
             // 
-            button8.Location = new Point(170, 169);
-            button8.Name = "button8";
-            button8.Size = new Size(44, 24);
-            button8.TabIndex = 21;
-            button8.Text = "R";
-            button8.UseVisualStyleBackColor = true;
+            readAddress5_btn.Location = new Point(170, 169);
+            readAddress5_btn.Name = "readAddress5_btn";
+            readAddress5_btn.Size = new Size(44, 24);
+            readAddress5_btn.TabIndex = 21;
+            readAddress5_btn.Text = "R";
+            readAddress5_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // addressW6_txt
             // 
-            textBox10.Location = new Point(220, 200);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(90, 24);
-            textBox10.TabIndex = 28;
-            textBox10.Text = "0x1234";
+            addressW6_txt.Location = new Point(220, 200);
+            addressW6_txt.Name = "addressW6_txt";
+            addressW6_txt.Size = new Size(90, 24);
+            addressW6_txt.TabIndex = 28;
+            addressW6_txt.Text = "0x1234";
             // 
-            // textBox11
+            // address6_hex
             // 
-            textBox11.Location = new Point(74, 200);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(90, 24);
-            textBox11.TabIndex = 29;
-            textBox11.Text = "1010h";
+            address6_hex.Location = new Point(74, 200);
+            address6_hex.Name = "address6_hex";
+            address6_hex.Size = new Size(90, 24);
+            address6_hex.TabIndex = 29;
+            address6_hex.Text = "100Ah";
             // 
             // label5
             // 
@@ -516,39 +532,39 @@ namespace ModbusReadWrite
             label5.TabIndex = 27;
             label5.Text = "address";
             // 
-            // button9
+            // writeAddress6_btn
             // 
-            button9.Location = new Point(316, 200);
-            button9.Name = "button9";
-            button9.Size = new Size(44, 24);
-            button9.TabIndex = 25;
-            button9.Text = "W";
-            button9.UseVisualStyleBackColor = true;
+            writeAddress6_btn.Location = new Point(316, 200);
+            writeAddress6_btn.Name = "writeAddress6_btn";
+            writeAddress6_btn.Size = new Size(44, 24);
+            writeAddress6_btn.TabIndex = 25;
+            writeAddress6_btn.Text = "W";
+            writeAddress6_btn.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // readAddress6_btn
             // 
-            button10.Location = new Point(170, 199);
-            button10.Name = "button10";
-            button10.Size = new Size(44, 24);
-            button10.TabIndex = 26;
-            button10.Text = "R";
-            button10.UseVisualStyleBackColor = true;
+            readAddress6_btn.Location = new Point(170, 199);
+            readAddress6_btn.Name = "readAddress6_btn";
+            readAddress6_btn.Size = new Size(44, 24);
+            readAddress6_btn.TabIndex = 26;
+            readAddress6_btn.Text = "R";
+            readAddress6_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // addressW7_txt
             // 
-            textBox12.Location = new Point(220, 230);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(90, 24);
-            textBox12.TabIndex = 33;
-            textBox12.Text = "0x1234";
+            addressW7_txt.Location = new Point(220, 230);
+            addressW7_txt.Name = "addressW7_txt";
+            addressW7_txt.Size = new Size(90, 24);
+            addressW7_txt.TabIndex = 33;
+            addressW7_txt.Text = "0x1234";
             // 
-            // textBox13
+            // address7_hex
             // 
-            textBox13.Location = new Point(74, 230);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(90, 24);
-            textBox13.TabIndex = 34;
-            textBox13.Text = "1010h";
+            address7_hex.Location = new Point(74, 230);
+            address7_hex.Name = "address7_hex";
+            address7_hex.Size = new Size(90, 24);
+            address7_hex.TabIndex = 34;
+            address7_hex.Text = "100Bh";
             // 
             // label6
             // 
@@ -559,39 +575,39 @@ namespace ModbusReadWrite
             label6.TabIndex = 32;
             label6.Text = "address";
             // 
-            // button11
+            // writeAddress7_btn
             // 
-            button11.Location = new Point(316, 230);
-            button11.Name = "button11";
-            button11.Size = new Size(44, 24);
-            button11.TabIndex = 30;
-            button11.Text = "W";
-            button11.UseVisualStyleBackColor = true;
+            writeAddress7_btn.Location = new Point(316, 230);
+            writeAddress7_btn.Name = "writeAddress7_btn";
+            writeAddress7_btn.Size = new Size(44, 24);
+            writeAddress7_btn.TabIndex = 30;
+            writeAddress7_btn.Text = "W";
+            writeAddress7_btn.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // readAddress7_btn
             // 
-            button12.Location = new Point(170, 229);
-            button12.Name = "button12";
-            button12.Size = new Size(44, 24);
-            button12.TabIndex = 31;
-            button12.Text = "R";
-            button12.UseVisualStyleBackColor = true;
+            readAddress7_btn.Location = new Point(170, 229);
+            readAddress7_btn.Name = "readAddress7_btn";
+            readAddress7_btn.Size = new Size(44, 24);
+            readAddress7_btn.TabIndex = 31;
+            readAddress7_btn.Text = "R";
+            readAddress7_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // addressW8_txt
             // 
-            textBox14.Location = new Point(220, 260);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(90, 24);
-            textBox14.TabIndex = 38;
-            textBox14.Text = "0x1234";
+            addressW8_txt.Location = new Point(220, 260);
+            addressW8_txt.Name = "addressW8_txt";
+            addressW8_txt.Size = new Size(90, 24);
+            addressW8_txt.TabIndex = 38;
+            addressW8_txt.Text = "0x1234";
             // 
-            // textBox15
+            // address8_hex
             // 
-            textBox15.Location = new Point(74, 260);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(90, 24);
-            textBox15.TabIndex = 39;
-            textBox15.Text = "1010h";
+            address8_hex.Location = new Point(74, 260);
+            address8_hex.Name = "address8_hex";
+            address8_hex.Size = new Size(90, 24);
+            address8_hex.TabIndex = 39;
+            address8_hex.Text = "1010h";
             // 
             // label7
             // 
@@ -602,39 +618,39 @@ namespace ModbusReadWrite
             label7.TabIndex = 37;
             label7.Text = "address";
             // 
-            // button13
+            // writeAddress8_btn
             // 
-            button13.Location = new Point(316, 260);
-            button13.Name = "button13";
-            button13.Size = new Size(44, 24);
-            button13.TabIndex = 35;
-            button13.Text = "W";
-            button13.UseVisualStyleBackColor = true;
+            writeAddress8_btn.Location = new Point(316, 260);
+            writeAddress8_btn.Name = "writeAddress8_btn";
+            writeAddress8_btn.Size = new Size(44, 24);
+            writeAddress8_btn.TabIndex = 35;
+            writeAddress8_btn.Text = "W";
+            writeAddress8_btn.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // readAddress8_btn
             // 
-            button14.Location = new Point(170, 259);
-            button14.Name = "button14";
-            button14.Size = new Size(44, 24);
-            button14.TabIndex = 36;
-            button14.Text = "R";
-            button14.UseVisualStyleBackColor = true;
+            readAddress8_btn.Location = new Point(170, 259);
+            readAddress8_btn.Name = "readAddress8_btn";
+            readAddress8_btn.Size = new Size(44, 24);
+            readAddress8_btn.TabIndex = 36;
+            readAddress8_btn.Text = "R";
+            readAddress8_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox16
+            // addressW9_txt
             // 
-            textBox16.Location = new Point(220, 290);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(90, 24);
-            textBox16.TabIndex = 43;
-            textBox16.Text = "0x1234";
+            addressW9_txt.Location = new Point(220, 290);
+            addressW9_txt.Name = "addressW9_txt";
+            addressW9_txt.Size = new Size(90, 24);
+            addressW9_txt.TabIndex = 43;
+            addressW9_txt.Text = "0x1234";
             // 
-            // textBox17
+            // address9_hex
             // 
-            textBox17.Location = new Point(74, 290);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(90, 24);
-            textBox17.TabIndex = 44;
-            textBox17.Text = "1010h";
+            address9_hex.Location = new Point(74, 290);
+            address9_hex.Name = "address9_hex";
+            address9_hex.Size = new Size(90, 24);
+            address9_hex.TabIndex = 44;
+            address9_hex.Text = "1010h";
             // 
             // label8
             // 
@@ -645,39 +661,39 @@ namespace ModbusReadWrite
             label8.TabIndex = 42;
             label8.Text = "address";
             // 
-            // button15
+            // writeAddress9_btn
             // 
-            button15.Location = new Point(316, 290);
-            button15.Name = "button15";
-            button15.Size = new Size(44, 24);
-            button15.TabIndex = 40;
-            button15.Text = "W";
-            button15.UseVisualStyleBackColor = true;
+            writeAddress9_btn.Location = new Point(316, 290);
+            writeAddress9_btn.Name = "writeAddress9_btn";
+            writeAddress9_btn.Size = new Size(44, 24);
+            writeAddress9_btn.TabIndex = 40;
+            writeAddress9_btn.Text = "W";
+            writeAddress9_btn.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // readAddress9_btn
             // 
-            button16.Location = new Point(170, 289);
-            button16.Name = "button16";
-            button16.Size = new Size(44, 24);
-            button16.TabIndex = 41;
-            button16.Text = "R";
-            button16.UseVisualStyleBackColor = true;
+            readAddress9_btn.Location = new Point(170, 289);
+            readAddress9_btn.Name = "readAddress9_btn";
+            readAddress9_btn.Size = new Size(44, 24);
+            readAddress9_btn.TabIndex = 41;
+            readAddress9_btn.Text = "R";
+            readAddress9_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox18
+            // addressW10_txt
             // 
-            textBox18.Location = new Point(220, 320);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(90, 24);
-            textBox18.TabIndex = 48;
-            textBox18.Text = "0x1234";
+            addressW10_txt.Location = new Point(220, 320);
+            addressW10_txt.Name = "addressW10_txt";
+            addressW10_txt.Size = new Size(90, 24);
+            addressW10_txt.TabIndex = 48;
+            addressW10_txt.Text = "0x1234";
             // 
-            // textBox19
+            // address10_hex
             // 
-            textBox19.Location = new Point(74, 320);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(90, 24);
-            textBox19.TabIndex = 49;
-            textBox19.Text = "1010h";
+            address10_hex.Location = new Point(74, 320);
+            address10_hex.Name = "address10_hex";
+            address10_hex.Size = new Size(90, 24);
+            address10_hex.TabIndex = 49;
+            address10_hex.Text = "1010h";
             // 
             // label9
             // 
@@ -688,39 +704,39 @@ namespace ModbusReadWrite
             label9.TabIndex = 47;
             label9.Text = "address";
             // 
-            // button17
+            // writeAddress10_btn
             // 
-            button17.Location = new Point(316, 320);
-            button17.Name = "button17";
-            button17.Size = new Size(44, 24);
-            button17.TabIndex = 45;
-            button17.Text = "W";
-            button17.UseVisualStyleBackColor = true;
+            writeAddress10_btn.Location = new Point(316, 320);
+            writeAddress10_btn.Name = "writeAddress10_btn";
+            writeAddress10_btn.Size = new Size(44, 24);
+            writeAddress10_btn.TabIndex = 45;
+            writeAddress10_btn.Text = "W";
+            writeAddress10_btn.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // readAddress10_btn
             // 
-            button18.Location = new Point(170, 319);
-            button18.Name = "button18";
-            button18.Size = new Size(44, 24);
-            button18.TabIndex = 46;
-            button18.Text = "R";
-            button18.UseVisualStyleBackColor = true;
+            readAddress10_btn.Location = new Point(170, 319);
+            readAddress10_btn.Name = "readAddress10_btn";
+            readAddress10_btn.Size = new Size(44, 24);
+            readAddress10_btn.TabIndex = 46;
+            readAddress10_btn.Text = "R";
+            readAddress10_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox20
+            // addressW11_txt
             // 
-            textBox20.Location = new Point(220, 350);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(90, 24);
-            textBox20.TabIndex = 53;
-            textBox20.Text = "0x1234";
+            addressW11_txt.Location = new Point(220, 350);
+            addressW11_txt.Name = "addressW11_txt";
+            addressW11_txt.Size = new Size(90, 24);
+            addressW11_txt.TabIndex = 53;
+            addressW11_txt.Text = "0x1234";
             // 
-            // textBox21
+            // address11_hex
             // 
-            textBox21.Location = new Point(74, 350);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(90, 24);
-            textBox21.TabIndex = 54;
-            textBox21.Text = "1010h";
+            address11_hex.Location = new Point(74, 350);
+            address11_hex.Name = "address11_hex";
+            address11_hex.Size = new Size(90, 24);
+            address11_hex.TabIndex = 54;
+            address11_hex.Text = "1010h";
             // 
             // label10
             // 
@@ -731,39 +747,39 @@ namespace ModbusReadWrite
             label10.TabIndex = 52;
             label10.Text = "address";
             // 
-            // button19
+            // writeAddress11_btn
             // 
-            button19.Location = new Point(316, 350);
-            button19.Name = "button19";
-            button19.Size = new Size(44, 24);
-            button19.TabIndex = 50;
-            button19.Text = "W";
-            button19.UseVisualStyleBackColor = true;
+            writeAddress11_btn.Location = new Point(316, 350);
+            writeAddress11_btn.Name = "writeAddress11_btn";
+            writeAddress11_btn.Size = new Size(44, 24);
+            writeAddress11_btn.TabIndex = 50;
+            writeAddress11_btn.Text = "W";
+            writeAddress11_btn.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // readAddress11_btn
             // 
-            button20.Location = new Point(170, 349);
-            button20.Name = "button20";
-            button20.Size = new Size(44, 24);
-            button20.TabIndex = 51;
-            button20.Text = "R";
-            button20.UseVisualStyleBackColor = true;
+            readAddress11_btn.Location = new Point(170, 349);
+            readAddress11_btn.Name = "readAddress11_btn";
+            readAddress11_btn.Size = new Size(44, 24);
+            readAddress11_btn.TabIndex = 51;
+            readAddress11_btn.Text = "R";
+            readAddress11_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox22
+            // addressW12_txt
             // 
-            textBox22.Location = new Point(220, 380);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(90, 24);
-            textBox22.TabIndex = 58;
-            textBox22.Text = "0x1234";
+            addressW12_txt.Location = new Point(220, 380);
+            addressW12_txt.Name = "addressW12_txt";
+            addressW12_txt.Size = new Size(90, 24);
+            addressW12_txt.TabIndex = 58;
+            addressW12_txt.Text = "0x1234";
             // 
-            // textBox23
+            // address12_hex
             // 
-            textBox23.Location = new Point(74, 380);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(90, 24);
-            textBox23.TabIndex = 59;
-            textBox23.Text = "1010h";
+            address12_hex.Location = new Point(74, 380);
+            address12_hex.Name = "address12_hex";
+            address12_hex.Size = new Size(90, 24);
+            address12_hex.TabIndex = 59;
+            address12_hex.Text = "1010h";
             // 
             // label11
             // 
@@ -774,66 +790,66 @@ namespace ModbusReadWrite
             label11.TabIndex = 57;
             label11.Text = "address";
             // 
-            // button21
+            // writeAddress12_btn
             // 
-            button21.Location = new Point(316, 380);
-            button21.Name = "button21";
-            button21.Size = new Size(44, 24);
-            button21.TabIndex = 55;
-            button21.Text = "W";
-            button21.UseVisualStyleBackColor = true;
+            writeAddress12_btn.Location = new Point(316, 380);
+            writeAddress12_btn.Name = "writeAddress12_btn";
+            writeAddress12_btn.Size = new Size(44, 24);
+            writeAddress12_btn.TabIndex = 55;
+            writeAddress12_btn.Text = "W";
+            writeAddress12_btn.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // readAddress12_btn
             // 
-            button22.Location = new Point(170, 379);
-            button22.Name = "button22";
-            button22.Size = new Size(44, 24);
-            button22.TabIndex = 56;
-            button22.Text = "R";
-            button22.UseVisualStyleBackColor = true;
+            readAddress12_btn.Location = new Point(170, 379);
+            readAddress12_btn.Name = "readAddress12_btn";
+            readAddress12_btn.Size = new Size(44, 24);
+            readAddress12_btn.TabIndex = 56;
+            readAddress12_btn.Text = "R";
+            readAddress12_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox24
+            // addressW13_txt
             // 
-            textBox24.Location = new Point(220, 410);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(90, 24);
-            textBox24.TabIndex = 63;
-            textBox24.Text = "0x1234";
+            addressW13_txt.Location = new Point(220, 410);
+            addressW13_txt.Name = "addressW13_txt";
+            addressW13_txt.Size = new Size(90, 24);
+            addressW13_txt.TabIndex = 63;
+            addressW13_txt.Text = "0x1234";
             // 
-            // textBox25
+            // address13_hex
             // 
-            textBox25.Location = new Point(74, 410);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(90, 24);
-            textBox25.TabIndex = 64;
-            textBox25.Text = "1010h";
+            address13_hex.Location = new Point(74, 410);
+            address13_hex.Name = "address13_hex";
+            address13_hex.Size = new Size(90, 24);
+            address13_hex.TabIndex = 64;
+            address13_hex.Text = "1010h";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(12, 413);
+            label12.Location = new Point(12, 414);
             label12.Name = "label12";
             label12.Size = new Size(55, 17);
             label12.TabIndex = 62;
             label12.Text = "address";
             // 
-            // button23
+            // writeAddress13_btn
             // 
-            button23.Location = new Point(316, 410);
-            button23.Name = "button23";
-            button23.Size = new Size(44, 24);
-            button23.TabIndex = 60;
-            button23.Text = "W";
-            button23.UseVisualStyleBackColor = true;
+            writeAddress13_btn.Location = new Point(316, 410);
+            writeAddress13_btn.Name = "writeAddress13_btn";
+            writeAddress13_btn.Size = new Size(44, 24);
+            writeAddress13_btn.TabIndex = 60;
+            writeAddress13_btn.Text = "W";
+            writeAddress13_btn.UseVisualStyleBackColor = true;
             // 
-            // button24
+            // readAddress13_btn
             // 
-            button24.Location = new Point(170, 409);
-            button24.Name = "button24";
-            button24.Size = new Size(44, 24);
-            button24.TabIndex = 61;
-            button24.Text = "R";
-            button24.UseVisualStyleBackColor = true;
+            readAddress13_btn.Location = new Point(170, 410);
+            readAddress13_btn.Name = "readAddress13_btn";
+            readAddress13_btn.Size = new Size(44, 24);
+            readAddress13_btn.TabIndex = 61;
+            readAddress13_btn.Text = "R";
+            readAddress13_btn.UseVisualStyleBackColor = true;
             // 
             // baudrate_comb
             // 
@@ -856,7 +872,7 @@ namespace ModbusReadWrite
             // format_comb
             // 
             format_comb.FormattingEnabled = true;
-            format_comb.Location = new Point(537, 8);
+            format_comb.Location = new Point(494, 8);
             format_comb.Name = "format_comb";
             format_comb.Size = new Size(91, 25);
             format_comb.TabIndex = 1;
@@ -865,7 +881,7 @@ namespace ModbusReadWrite
             // rtuAscii_comb
             // 
             rtuAscii_comb.FormattingEnabled = true;
-            rtuAscii_comb.Location = new Point(648, 8);
+            rtuAscii_comb.Location = new Point(589, 8);
             rtuAscii_comb.Name = "rtuAscii_comb";
             rtuAscii_comb.Size = new Size(91, 25);
             rtuAscii_comb.TabIndex = 1;
@@ -873,9 +889,9 @@ namespace ModbusReadWrite
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Minimum = 1;
-            numericUpDown1.Maximum = 247;
-            numericUpDown1.Location = new Point(535, 55);
+            numericUpDown1.Location = new Point(760, 12);
+            numericUpDown1.Maximum = new decimal(new int[] { 247, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(73, 24);
             numericUpDown1.TabIndex = 65;
@@ -884,7 +900,7 @@ namespace ModbusReadWrite
             // stationNumber_lbl
             // 
             stationNumber_lbl.AutoSize = true;
-            stationNumber_lbl.Location = new Point(461, 57);
+            stationNumber_lbl.Location = new Point(686, 12);
             stationNumber_lbl.Name = "stationNumber_lbl";
             stationNumber_lbl.Size = new Size(68, 17);
             stationNumber_lbl.TabIndex = 2;
@@ -892,20 +908,193 @@ namespace ModbusReadWrite
             // 
             // rxtx_msg_txt
             // 
+            rxtx_msg_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            rxtx_msg_txt.Location = new Point(523, 281);
             rxtx_msg_txt.Multiline = true;
+            rxtx_msg_txt.Name = "rxtx_msg_txt";
             rxtx_msg_txt.ReadOnly = true;
             rxtx_msg_txt.ScrollBars = ScrollBars.Vertical;
-            rxtx_msg_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            rxtx_msg_txt.Location = new Point(461, 95);
-            rxtx_msg_txt.Name = "rxtx_msg_txt";
-            rxtx_msg_txt.Size = new Size(305, 330);
+            rxtx_msg_txt.Size = new Size(445, 153);
             rxtx_msg_txt.TabIndex = 66;
+            // 
+            // continueRead1_chk
+            // 
+            continueRead1_chk.Checked = true;
+            continueRead1_chk.CheckState = CheckState.Checked;
+            continueRead1_chk.Location = new Point(421, 49);
+            continueRead1_chk.Name = "continueRead1_chk";
+            continueRead1_chk.Size = new Size(65, 24);
+            continueRead1_chk.TabIndex = 67;
+            continueRead1_chk.Text = "cycleR";
+            // 
+            // continueRead_btn
+            // 
+            continueRead_btn.Location = new Point(517, 44);
+            continueRead_btn.Name = "continueRead_btn";
+            continueRead_btn.Size = new Size(102, 36);
+            continueRead_btn.TabIndex = 68;
+            continueRead_btn.Text = "讀/停止";
+            continueRead_btn.UseVisualStyleBackColor = true;
+            // 
+            // sec_lbl
+            // 
+            sec_lbl.AutoSize = true;
+            sec_lbl.Location = new Point(686, 54);
+            sec_lbl.Name = "sec_lbl";
+            sec_lbl.Size = new Size(21, 17);
+            sec_lbl.TabIndex = 70;
+            sec_lbl.Text = "秒";
+            sec_lbl.Click += label13_Click;
+            // 
+            // continueRead5_chk
+            // 
+            continueRead5_chk.Checked = true;
+            continueRead5_chk.CheckState = CheckState.Checked;
+            continueRead5_chk.Location = new Point(421, 169);
+            continueRead5_chk.Name = "continueRead5_chk";
+            continueRead5_chk.Size = new Size(65, 24);
+            continueRead5_chk.TabIndex = 71;
+            continueRead5_chk.Text = "cycleR";
+            // 
+            // continueRead4_chk
+            // 
+            continueRead4_chk.Checked = true;
+            continueRead4_chk.CheckState = CheckState.Checked;
+            continueRead4_chk.Location = new Point(421, 138);
+            continueRead4_chk.Name = "continueRead4_chk";
+            continueRead4_chk.Size = new Size(65, 24);
+            continueRead4_chk.TabIndex = 72;
+            continueRead4_chk.Text = "cycleR";
+            // 
+            // continueRead3_chk
+            // 
+            continueRead3_chk.Checked = true;
+            continueRead3_chk.CheckState = CheckState.Checked;
+            continueRead3_chk.Location = new Point(421, 110);
+            continueRead3_chk.Name = "continueRead3_chk";
+            continueRead3_chk.Size = new Size(65, 24);
+            continueRead3_chk.TabIndex = 73;
+            continueRead3_chk.Text = "cycleR";
+            // 
+            // continueRead2_chk
+            // 
+            continueRead2_chk.Checked = true;
+            continueRead2_chk.CheckState = CheckState.Checked;
+            continueRead2_chk.Location = new Point(421, 81);
+            continueRead2_chk.Name = "continueRead2_chk";
+            continueRead2_chk.Size = new Size(65, 24);
+            continueRead2_chk.TabIndex = 74;
+            continueRead2_chk.Text = "cycleR";
+            // 
+            // continueRead6_chk
+            // 
+            continueRead6_chk.Checked = true;
+            continueRead6_chk.CheckState = CheckState.Checked;
+            continueRead6_chk.Location = new Point(421, 199);
+            continueRead6_chk.Name = "continueRead6_chk";
+            continueRead6_chk.Size = new Size(65, 24);
+            continueRead6_chk.TabIndex = 77;
+            continueRead6_chk.Text = "cycleR";
+            // 
+            // continueRead7_chk
+            // 
+            continueRead7_chk.Checked = true;
+            continueRead7_chk.CheckState = CheckState.Checked;
+            continueRead7_chk.Location = new Point(421, 229);
+            continueRead7_chk.Name = "continueRead7_chk";
+            continueRead7_chk.Size = new Size(65, 24);
+            continueRead7_chk.TabIndex = 76;
+            continueRead7_chk.Text = "cycleR";
+            // 
+            // continueRead8_chk
+            // 
+            continueRead8_chk.Checked = true;
+            continueRead8_chk.CheckState = CheckState.Checked;
+            continueRead8_chk.Location = new Point(421, 259);
+            continueRead8_chk.Name = "continueRead8_chk";
+            continueRead8_chk.Size = new Size(65, 24);
+            continueRead8_chk.TabIndex = 75;
+            continueRead8_chk.Text = "cycleR";
+            // 
+            // continueRead9_chk
+            // 
+            continueRead9_chk.Checked = true;
+            continueRead9_chk.CheckState = CheckState.Checked;
+            continueRead9_chk.Location = new Point(421, 290);
+            continueRead9_chk.Name = "continueRead9_chk";
+            continueRead9_chk.Size = new Size(65, 24);
+            continueRead9_chk.TabIndex = 80;
+            continueRead9_chk.Text = "cycleR";
+            // 
+            // continueRead10_chk
+            // 
+            continueRead10_chk.Checked = true;
+            continueRead10_chk.CheckState = CheckState.Checked;
+            continueRead10_chk.Location = new Point(421, 321);
+            continueRead10_chk.Name = "continueRead10_chk";
+            continueRead10_chk.Size = new Size(65, 24);
+            continueRead10_chk.TabIndex = 79;
+            continueRead10_chk.Text = "cycleR";
+            // 
+            // continueRead11_chk
+            // 
+            continueRead11_chk.Checked = true;
+            continueRead11_chk.CheckState = CheckState.Checked;
+            continueRead11_chk.Location = new Point(421, 350);
+            continueRead11_chk.Name = "continueRead11_chk";
+            continueRead11_chk.Size = new Size(65, 24);
+            continueRead11_chk.TabIndex = 78;
+            continueRead11_chk.Text = "cycleR";
+            // 
+            // continueRead12_chk
+            // 
+            continueRead12_chk.Checked = true;
+            continueRead12_chk.CheckState = CheckState.Checked;
+            continueRead12_chk.Location = new Point(421, 381);
+            continueRead12_chk.Name = "continueRead12_chk";
+            continueRead12_chk.Size = new Size(65, 24);
+            continueRead12_chk.TabIndex = 83;
+            continueRead12_chk.Text = "cycleR";
+            // 
+            // continueRead13_chk
+            // 
+            continueRead13_chk.Checked = true;
+            continueRead13_chk.CheckState = CheckState.Checked;
+            continueRead13_chk.Location = new Point(421, 410);
+            continueRead13_chk.Name = "continueRead13_chk";
+            continueRead13_chk.Size = new Size(65, 24);
+            continueRead13_chk.TabIndex = 82;
+            continueRead13_chk.Text = "cycleR";
+            // 
+            // continueReadInterval_txt
+            // 
+            continueReadInterval_txt.Location = new Point(625, 49);
+            continueReadInterval_txt.Name = "continueReadInterval_txt";
+            continueReadInterval_txt.Size = new Size(63, 24);
+            continueReadInterval_txt.TabIndex = 84;
+            continueReadInterval_txt.Text = "0.5";
             // 
             // main
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(980, 537);
+            Controls.Add(continueReadInterval_txt);
+            Controls.Add(continueRead12_chk);
+            Controls.Add(continueRead13_chk);
+            Controls.Add(continueRead9_chk);
+            Controls.Add(continueRead10_chk);
+            Controls.Add(continueRead11_chk);
+            Controls.Add(continueRead6_chk);
+            Controls.Add(continueRead7_chk);
+            Controls.Add(continueRead8_chk);
+            Controls.Add(continueRead2_chk);
+            Controls.Add(continueRead3_chk);
+            Controls.Add(continueRead4_chk);
+            Controls.Add(continueRead5_chk);
+            Controls.Add(sec_lbl);
+            Controls.Add(continueRead_btn);
+            Controls.Add(continueRead1_chk);
             Controls.Add(rxtx_msg_txt);
             Controls.Add(numericUpDown1);
             Controls.Add(hex1_check);
@@ -921,67 +1110,67 @@ namespace ModbusReadWrite
             Controls.Add(hex11_check);
             Controls.Add(hex12_check);
             Controls.Add(hex13_check);
-            Controls.Add(textBox24);
-            Controls.Add(textBox25);
+            Controls.Add(addressW13_txt);
+            Controls.Add(address13_hex);
             Controls.Add(label12);
-            Controls.Add(button23);
-            Controls.Add(button24);
-            Controls.Add(textBox22);
-            Controls.Add(textBox23);
+            Controls.Add(writeAddress13_btn);
+            Controls.Add(readAddress13_btn);
+            Controls.Add(addressW12_txt);
+            Controls.Add(address12_hex);
             Controls.Add(label11);
-            Controls.Add(button21);
-            Controls.Add(button22);
-            Controls.Add(textBox20);
-            Controls.Add(textBox21);
+            Controls.Add(writeAddress12_btn);
+            Controls.Add(readAddress12_btn);
+            Controls.Add(addressW11_txt);
+            Controls.Add(address11_hex);
             Controls.Add(label10);
-            Controls.Add(button19);
-            Controls.Add(button20);
-            Controls.Add(textBox18);
-            Controls.Add(textBox19);
+            Controls.Add(writeAddress11_btn);
+            Controls.Add(readAddress11_btn);
+            Controls.Add(addressW10_txt);
+            Controls.Add(address10_hex);
             Controls.Add(label9);
-            Controls.Add(button17);
-            Controls.Add(button18);
-            Controls.Add(textBox16);
-            Controls.Add(textBox17);
+            Controls.Add(writeAddress10_btn);
+            Controls.Add(readAddress10_btn);
+            Controls.Add(addressW9_txt);
+            Controls.Add(address9_hex);
             Controls.Add(label8);
-            Controls.Add(button15);
-            Controls.Add(button16);
-            Controls.Add(textBox14);
-            Controls.Add(textBox15);
+            Controls.Add(writeAddress9_btn);
+            Controls.Add(readAddress9_btn);
+            Controls.Add(addressW8_txt);
+            Controls.Add(address8_hex);
             Controls.Add(label7);
-            Controls.Add(button13);
-            Controls.Add(button14);
-            Controls.Add(textBox12);
-            Controls.Add(textBox13);
+            Controls.Add(writeAddress8_btn);
+            Controls.Add(readAddress8_btn);
+            Controls.Add(addressW7_txt);
+            Controls.Add(address7_hex);
             Controls.Add(label6);
-            Controls.Add(button11);
-            Controls.Add(button12);
-            Controls.Add(textBox10);
-            Controls.Add(textBox11);
+            Controls.Add(writeAddress7_btn);
+            Controls.Add(readAddress7_btn);
+            Controls.Add(addressW6_txt);
+            Controls.Add(address6_hex);
             Controls.Add(label5);
-            Controls.Add(button9);
-            Controls.Add(button10);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
+            Controls.Add(writeAddress6_btn);
+            Controls.Add(readAddress6_btn);
+            Controls.Add(addressW5_txt);
+            Controls.Add(address5_hex);
             Controls.Add(label4);
-            Controls.Add(button7);
-            Controls.Add(button8);
-            Controls.Add(textBox6);
-            Controls.Add(textBox7);
+            Controls.Add(writeAddress5_btn);
+            Controls.Add(readAddress5_btn);
+            Controls.Add(addressW4_txt);
+            Controls.Add(address4_hex);
             Controls.Add(label3);
-            Controls.Add(button5);
-            Controls.Add(button6);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
+            Controls.Add(writeAddress4_btn);
+            Controls.Add(readAddress4_btn);
+            Controls.Add(addressW3_txt);
+            Controls.Add(address3_hex);
             Controls.Add(label2);
-            Controls.Add(button3);
-            Controls.Add(button4);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
+            Controls.Add(writeAddress3_btn);
+            Controls.Add(readAddress3_btn);
+            Controls.Add(addressW2_txt);
+            Controls.Add(address2_hex);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
+            Controls.Add(writeAddress2_btn);
+            Controls.Add(readAddress2_btn);
+            Controls.Add(addressW1_txt);
             Controls.Add(address1_hex);
             Controls.Add(address1_lbl);
             Controls.Add(stationNumber_lbl);
@@ -1022,68 +1211,68 @@ namespace ModbusReadWrite
         private Label address1_lbl;
         private TextBox address1_hex;
         private Button readAddress1_btn;
-        private TextBox textBox1;
+        private TextBox addressW1_txt;
         private Button writeAddress1_btn;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox addressW2_txt;
+        private TextBox address2_hex;
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private Button writeAddress2_btn;
+        private Button readAddress2_btn;
+        private TextBox addressW3_txt;
+        private TextBox address3_hex;
         private Label label2;
-        private Button button3;
-        private Button button4;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private Button writeAddress3_btn;
+        private Button readAddress3_btn;
+        private TextBox addressW4_txt;
+        private TextBox address4_hex;
         private Label label3;
-        private Button button5;
-        private Button button6;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private Button writeAddress4_btn;
+        private Button readAddress4_btn;
+        private TextBox addressW5_txt;
+        private TextBox address5_hex;
         private Label label4;
-        private Button button7;
-        private Button button8;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private Button writeAddress5_btn;
+        private Button readAddress5_btn;
+        private TextBox addressW6_txt;
+        private TextBox address6_hex;
         private Label label5;
-        private Button button9;
-        private Button button10;
-        private TextBox textBox12;
-        private TextBox textBox13;
+        private Button writeAddress6_btn;
+        private Button readAddress6_btn;
+        private TextBox addressW7_txt;
+        private TextBox address7_hex;
         private Label label6;
-        private Button button11;
-        private Button button12;
-        private TextBox textBox14;
-        private TextBox textBox15;
+        private Button writeAddress7_btn;
+        private Button readAddress7_btn;
+        private TextBox addressW8_txt;
+        private TextBox address8_hex;
         private Label label7;
-        private Button button13;
-        private Button button14;
-        private TextBox textBox16;
-        private TextBox textBox17;
+        private Button writeAddress8_btn;
+        private Button readAddress8_btn;
+        private TextBox addressW9_txt;
+        private TextBox address9_hex;
         private Label label8;
-        private Button button15;
-        private Button button16;
-        private TextBox textBox18;
-        private TextBox textBox19;
+        private Button writeAddress9_btn;
+        private Button readAddress9_btn;
+        private TextBox addressW10_txt;
+        private TextBox address10_hex;
         private Label label9;
-        private Button button17;
-        private Button button18;
-        private TextBox textBox20;
-        private TextBox textBox21;
+        private Button writeAddress10_btn;
+        private Button readAddress10_btn;
+        private TextBox addressW11_txt;
+        private TextBox address11_hex;
         private Label label10;
-        private Button button19;
-        private Button button20;
-        private TextBox textBox22;
-        private TextBox textBox23;
+        private Button writeAddress11_btn;
+        private Button readAddress11_btn;
+        private TextBox addressW12_txt;
+        private TextBox address12_hex;
         private Label label11;
-        private Button button21;
-        private Button button22;
-        private TextBox textBox24;
-        private TextBox textBox25;
+        private Button writeAddress12_btn;
+        private Button readAddress12_btn;
+        private TextBox addressW13_txt;
+        private TextBox address13_hex;
         private Label label12;
-        private Button button23;
-        private Button button24;
+        private Button writeAddress13_btn;
+        private Button readAddress13_btn;
         private ComboBox baudrate_comb;
         private Label baudRate_txt;
         private ComboBox format_comb;
@@ -1092,5 +1281,21 @@ namespace ModbusReadWrite
         private NumericUpDown numericUpDown1;
         private Label stationNumber_lbl;
         private TextBox rxtx_msg_txt;
+        private CheckBox continueRead1_chk;
+        private Button continueRead_btn;
+        private Label sec_lbl;
+        private CheckBox continueRead5_chk;
+        private CheckBox continueRead4_chk;
+        private CheckBox continueRead3_chk;
+        private CheckBox continueRead2_chk;
+        private CheckBox continueRead6_chk;
+        private CheckBox continueRead7_chk;
+        private CheckBox continueRead8_chk;
+        private CheckBox continueRead9_chk;
+        private CheckBox continueRead10_chk;
+        private CheckBox continueRead11_chk;
+        private CheckBox continueRead12_chk;
+        private CheckBox continueRead13_chk;
+        private TextBox continueReadInterval_txt;
     }
 }
