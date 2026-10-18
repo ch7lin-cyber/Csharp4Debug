@@ -19,13 +19,25 @@ namespace ModbusReadWrite
             comPort_comb.DropDownStyle = ComboBoxStyle.DropDownList;
             link_btn.Text = "連線";
             link_btn.Click += (_, _) => { if (port != null) Disconnect(); else Connect(); };
-            for (int i = 0; i < 13; i++)
+            // Bind Designer fields directly; name-based Controls lookups can return null.
+            var rows = new (TextBox Address, TextBox Value, Button Read, Button Write, CheckBox Hex)[]
             {
-                var address = i == 0 ? address1_hex : (TextBox)Controls[$"textBox{2 * i + 1}"]!;
-                var value = (TextBox)Controls[i == 0 ? "textBox1" : $"textBox{2 * i}"]!;
-                var read = i == 0 ? readAddress1_btn : (Button)Controls[$"button{2 * i}"]!;
-                var write = i == 0 ? writeAddress1_btn : (Button)Controls[$"button{2 * i - 1}"]!;
-                var hex = (CheckBox)Controls[$"hex{i + 1}_check"]!;
+                (address1_hex, textBox1, readAddress1_btn, writeAddress1_btn, hex1_check),
+                (textBox3, textBox2, button2, button1, hex2_check),
+                (textBox5, textBox4, button4, button3, hex3_check),
+                (textBox7, textBox6, button6, button5, hex4_check),
+                (textBox9, textBox8, button8, button7, hex5_check),
+                (textBox11, textBox10, button10, button9, hex6_check),
+                (textBox13, textBox12, button12, button11, hex7_check),
+                (textBox15, textBox14, button14, button13, hex8_check),
+                (textBox17, textBox16, button16, button15, hex9_check),
+                (textBox19, textBox18, button18, button17, hex10_check),
+                (textBox21, textBox20, button20, button19, hex11_check),
+                (textBox23, textBox22, button22, button21, hex12_check),
+                (textBox25, textBox24, button24, button23, hex13_check),
+            };
+            foreach (var (address, value, read, write, hex) in rows)
+            {
                 commands.AddRange(new[] { read, write });
                 bool previousHex = true;
                 hex.CheckedChanged += (_, _) =>
