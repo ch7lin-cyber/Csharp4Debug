@@ -933,7 +933,7 @@ namespace ModbusReadWrite
             continueRead_btn.Name = "continueRead_btn";
             continueRead_btn.Size = new Size(102, 36);
             continueRead_btn.TabIndex = 68;
-            continueRead_btn.Text = "讀/停止";
+            continueRead_btn.Text = "循環讀";
             continueRead_btn.UseVisualStyleBackColor = true;
             // 
             // sec_lbl
