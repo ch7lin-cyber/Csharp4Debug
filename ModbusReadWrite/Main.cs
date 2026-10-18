@@ -184,6 +184,11 @@ namespace ModbusReadWrite
                 Report("RX " + Convert.ToHexString(response));
                 if (write) Report("寫入成功"); else value.Text = Format((ushort)((response[3] << 8) | response[4]), hex.Checked);
             }
+            catch (InvalidDataException ex)
+            {
+                if (!IsDisposed)
+                    Report($"站號 {numericUpDown1.Value}，功能碼 {(write ? "06" : "03")}，位址 {address.Text}：{ex.Message}（本筆未成功，保留原顯示值）");
+            }
             catch (Exception ex) { if (!IsDisposed) { Report(ex.Message); if (ex is IOException || ex is UnauthorizedAccessException || ex is ObjectDisposedException) Disconnect(); } }
             finally { busy = false; if (!IsDisposed) SetCommands(port != null); }
         }

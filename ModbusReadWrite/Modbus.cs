@@ -50,7 +50,19 @@ internal static class Modbus
             if (Crc(payload) != (bytes[^2] | bytes[^1] << 8)) throw new InvalidDataException("CRC 錯誤。");
         }
         if (payload[0] != request[0]) throw new InvalidDataException("回覆站號不符。");
-        if (payload[1] == (request[1] | 0x80) && payload.Length == 3) throw new InvalidDataException($"Modbus 異常碼 0x{payload[2]:X2}");
+        if (payload[1] == (request[1] | 0x80) && payload.Length == 3)
+        {
+            string reason = payload[2] switch
+            {
+                0x01 => "Illegal Function：設備不支援此功能碼",
+                0x02 => "Illegal Data Address：設備不支援此暫存器位址或讀取範圍",
+                0x03 => "Illegal Data Value：設備不接受此參數值",
+                0x04 => "Server Device Failure：設備執行失敗",
+                0x06 => "Server Device Busy：設備忙碌",
+                _ => "設備回覆異常"
+            };
+            throw new InvalidDataException($"RX {Convert.ToHexString(payload)}，Modbus 異常碼 0x{payload[2]:X2}，{reason}");
+        }
         if (payload[1] != request[1]) throw new InvalidDataException("回覆功能碼不符。");
         if (request[1] == 3 && (payload.Length != 5 || payload[2] != 2)) throw new InvalidDataException("03 回覆長度錯誤。");
         if (request[1] == 6 && !payload.SequenceEqual(request)) throw new InvalidDataException("06 回覆與寫入內容不符。");
