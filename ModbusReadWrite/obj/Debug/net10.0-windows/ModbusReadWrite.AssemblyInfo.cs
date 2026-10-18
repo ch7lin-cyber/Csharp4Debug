@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ModbusReadWrite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1795a4f5e6061de92e6c8292a6378bad0fdcb987")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9473a82b771d0331a27798c5541abb516e563ea1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ModbusReadWrite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ModbusReadWrite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

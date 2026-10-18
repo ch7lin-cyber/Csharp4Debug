@@ -268,7 +268,7 @@ namespace ModbusReadWrite
             // 
             // link_btn
             // 
-            link_btn.Location = new Point(220, 1);
+            link_btn.Location = new Point(251, 5);
             link_btn.Name = "link_btn";
             link_btn.Size = new Size(102, 36);
             link_btn.TabIndex = 0;
@@ -280,7 +280,7 @@ namespace ModbusReadWrite
             comPort_comb.FormattingEnabled = true;
             comPort_comb.Location = new Point(74, 12);
             comPort_comb.Name = "comPort_comb";
-            comPort_comb.Size = new Size(140, 25);
+            comPort_comb.Size = new Size(171, 25);
             comPort_comb.TabIndex = 1;
             // 
             // comPort_lbl
