@@ -22,19 +22,19 @@ namespace ModbusReadWrite
             // Bind Designer fields directly; name-based Controls lookups can return null.
             var rows = new (TextBox Address, TextBox Value, Button Read, Button Write, CheckBox Hex)[]
             {
-                (address1_hex, textBox1, readAddress1_btn, writeAddress1_btn, hex1_check),
-                (textBox3, textBox2, button2, button1, hex2_check),
-                (textBox5, textBox4, button4, button3, hex3_check),
-                (textBox7, textBox6, button6, button5, hex4_check),
-                (textBox9, textBox8, button8, button7, hex5_check),
-                (textBox11, textBox10, button10, button9, hex6_check),
-                (textBox13, textBox12, button12, button11, hex7_check),
-                (textBox15, textBox14, button14, button13, hex8_check),
-                (textBox17, textBox16, button16, button15, hex9_check),
-                (textBox19, textBox18, button18, button17, hex10_check),
-                (textBox21, textBox20, button20, button19, hex11_check),
-                (textBox23, textBox22, button22, button21, hex12_check),
-                (textBox25, textBox24, button24, button23, hex13_check),
+                (address1_hex, addressW1_txt, readAddress1_btn, writeAddress1_btn, hex1_check),
+                (address2_hex, addressW2_txt, readAddress2_btn, writeAddress2_btn, hex2_check),
+                (address3_hex, addressW3_txt, readAddress3_btn, writeAddress3_btn, hex3_check),
+                (address4_hex, addressW4_txt, readAddress4_btn, writeAddress4_btn, hex4_check),
+                (address5_hex, addressW5_txt, readAddress5_btn, writeAddress5_btn, hex5_check),
+                (address6_hex, addressW6_txt, readAddress6_btn, writeAddress6_btn, hex6_check),
+                (address7_hex, addressW7_txt, readAddress7_btn, writeAddress7_btn, hex7_check),
+                (address8_hex, addressW8_txt, readAddress8_btn, writeAddress8_btn, hex8_check),
+                (address9_hex, addressW9_txt, readAddress9_btn, writeAddress9_btn, hex9_check),
+                (address10_hex, addressW10_txt, readAddress10_btn, writeAddress10_btn, hex10_check),
+                (address11_hex, addressW11_txt, readAddress11_btn, writeAddress11_btn, hex11_check),
+                (address12_hex, addressW12_txt, readAddress12_btn, writeAddress12_btn, hex12_check),
+                (address13_hex, addressW13_txt, readAddress13_btn, writeAddress13_btn, hex13_check),
             };
             foreach (var (address, value, read, write, hex) in rows)
             {
@@ -124,6 +124,11 @@ namespace ModbusReadWrite
             }
             catch (Exception ex) { if (!IsDisposed) { Report(ex.Message); if (ex is IOException || ex is UnauthorizedAccessException || ex is ObjectDisposedException) Disconnect(); } }
             finally { busy = false; if (!IsDisposed) SetCommands(port != null); }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
