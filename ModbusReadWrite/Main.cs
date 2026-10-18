@@ -54,8 +54,8 @@ namespace ModbusReadWrite
                 {
                     try
                     {
-                        ushort a = Parse(address.Text, previousHex), v = Parse(value.Text, previousHex);
-                        address.Text = Format(a, hex.Checked); value.Text = Format(v, hex.Checked);
+                        ushort v = Parse(value.Text, previousHex);
+                        value.Text = Format(v, hex.Checked);
                         previousHex = hex.Checked; hex.Text = hex.Checked ? "HEX" : "DEC";
                     }
                     catch (Exception ex) { hex.Checked = previousHex; Report(ex.Message); }
@@ -174,7 +174,8 @@ namespace ModbusReadWrite
             SerialPort current = port;
             try
             {
-                ushort a = Parse(address.Text, hex.Checked), v = write ? Parse(value.Text, hex.Checked) : (ushort)1;
+                // Register addresses always use HEX; the checkbox controls values only.
+                ushort a = Parse(address.Text, true), v = write ? Parse(value.Text, hex.Checked) : (ushort)1;
                 byte[] request = { (byte)numericUpDown1.Value, (byte)(write ? 6 : 3), (byte)(a >> 8), (byte)a, (byte)(v >> 8), (byte)v };
                 bool ascii = rtuAscii_comb.Text == "ASCII";
                 busy = true; SetCommands(false);
@@ -207,7 +208,7 @@ namespace ModbusReadWrite
             { Report("循環間隔請輸入大於 0、最多 86400 的秒數。"); return; }
             var selected = cycleRows.Where(r => r.Cycle.Checked).ToArray();
             if (selected.Length == 0) { Report("請至少勾選一個 cycleR。"); return; }
-            try { foreach (var row in selected) Parse(row.Address.Text, row.Hex.Checked); }
+            try { foreach (var row in selected) Parse(row.Address.Text, true); }
             catch (FormatException ex) { Report(ex.Message); return; }
             using var cancellation = new CancellationTokenSource();
             cycleCancellation = cancellation;
